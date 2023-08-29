@@ -22,5 +22,6 @@ class SpacyReflector(IReflector):
         self.builder = builder
 
     def reflect(self, message: str) -> str:
+        print('reflect')
         doc = self.nlp(message)
         return self.builder.safe_build(doc)
